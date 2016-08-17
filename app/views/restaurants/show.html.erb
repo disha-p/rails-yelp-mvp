@@ -1,0 +1,15 @@
+<h1>Sumbit a review for <%= @restaurant.name %> </h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+<p><%= @restaurant.phone_number %></p>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %> <%= review.rating %> </li>
+  <% end %>
+
+</ul>
+
+
+<%= link_to "Review", new_restaurant_review_path(@restaurant)  %>
+

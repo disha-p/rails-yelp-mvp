@@ -1,0 +1,16 @@
+<h1>Add a new restaurant</h1>
+
+<div class="container">
+  <div class="row">
+    <div clas
+    s="col-xs-12 col-sm-6 col-sm-offset-3">
+    <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name, placeholder: "The Fat Pig"%>
+        <%= f.input :category, collection: Restaurant::CATEGORIES, prompt: "Choose one"  %>
+        <%= f.input :phone_number, placeholder:" 01 02 03 04 058" %>
+        <%= f.input :address, placeholder: "123 Magnolia Avenue" %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+</div>
